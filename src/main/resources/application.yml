@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: local
+  application:
+    name: dbConnection
+
+server:
+  port: 8005
+
+databases:
+  connections:
+    - name: op_users
+      username: virnect-onpremise
+      password: qjsprxm123
+      database-type: mysql
+      url: jdbc:mysql://192.168.0.9:3306/op_users
+
+    - name: HR
+      username: hr
+      password: 1234
+      database-type: oracle
+      url: jdbc:oracle:thin:@192.168.0.9:1521:XE
+
+    - name: sample
+      username: SA
+      password: Qjsprxm12!
+      database-type: mssql
+      url: jdbc:sqlserver://192.168.0.9:1433;databaseName=sample
